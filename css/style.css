@@ -79,5 +79,10 @@ h1 {
     .input{
         padding: 10%;
         font-size: 30px;
+        top: 70%;
+    }
+    h1{
+        font-size: 60px;
+        top: 15%;
     }
 }
