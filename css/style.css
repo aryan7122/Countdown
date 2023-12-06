@@ -1,14 +1,14 @@
-.col{
+.col {
     display: flex;
     align-items: baseline;
     justify-content: center;
     width: 100%;
-    height: 100%;    
+    height: 100%;
     box-shadow: 0 0 10px wheat;
     border-radius: 20px;
 }
 
-.i{
+.i {
     line-height: 60px;
     text-align: center;
     position: absolute;
@@ -19,7 +19,7 @@
     padding-top: 20px;
 }
 
-.input{
+.input {
     padding: 30px;
     text-align: center;
     font-size: 50px;
@@ -31,13 +31,15 @@
     text-shadow: 0px 0px 15px rgb(102, 102, 102);
     cursor: pointer;
 }
-span{
-    cursor:text;
+
+span {
+    cursor: text;
     color: #fff;
     text-shadow: 0px 0px 15px rgb(125, 124, 124);
     font-size: 1.6rem;
 }
-*::selection{
+
+*::selection {
     background-color: rgb(255, 255, 255);
 }
 
@@ -56,10 +58,10 @@ canvas {
 }
 
 h1 {
-    text-align: center ;
+    text-align: center;
     position: absolute;
     top: 10%;
-    left: 53%;
+    /* left: 53%; */
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: "Source Sans Pro";
@@ -71,19 +73,63 @@ h1 {
 
 
 @media only screen and (max-width: 600px) {
-    .input{
+    .input {
         padding: 10%;
         font-size: 30px;
     }
-    .i{
+
+    .i {
         top: 50%;
         line-height: 40px;
     }
-    h1{
+
+    h1 {
         font-size: 5rem;
         top: 15%;
     }
-    span{
+
+    span {
         font-size: 1.3rem;
+    }
+}
+
+
+
+h1 {
+
+    font: 700 4em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+
+    /* Clip Background Image */
+
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
     }
 }
