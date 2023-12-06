@@ -1,44 +1,46 @@
 .col{
-    position: absolute;
-    width: 70%;
-    height: 300px;    
-    margin: 20% 14%  ;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;    
+    /* margin: 0% 0%  ; */
+    /* margin-bottom: -10%; */
     /* background-color: rgba(255, 255, 255, 0.1); */
-    box-shadow: 0 0 5px wheat;
+    box-shadow: 0 0 10px wheat;
     border-radius: 20px;
 }
 
-.col div{
-    text-align: center;
-    font-family: 'Arima', cursive;
-    width: 100%;
-    height: 50%;
-}
-
-
 .i{
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 40%;
+    padding-top: 20px;
 }
+
 .input{
-    margin: 10px;
+    padding: 30px;
+    /* margin: 10px; */
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600px;
-    width: 80%;
-    height: 90%;
-    border-right-style: none;
+    width: 50%;
+    height: 50%;
     background-color: transparent;
     color: rgb(255, 255, 255);
-    text-shadow: 0px 0px 15px black;
+    text-shadow: 0px 0px 15px rgb(102, 102, 102);
     cursor: pointer;
 }
 span{
     cursor:text;
     color: #fff;
-    text-shadow: 0px 0px 15px rgb(255, 255, 255);
-    font-size: 1.2rem;
+    text-shadow: 0px 0px 15px rgb(125, 124, 124);
+    font-size: 1.6rem;
 }
 *::selection{
     background-color: rgb(255, 255, 255);
@@ -51,6 +53,7 @@ body {
     margin: 0;
     background: #020202;
     cursor: crosshair;
+    box-sizing: border-box;
 }
 
 canvas {
@@ -58,8 +61,9 @@ canvas {
 }
 
 h1 {
+    text-align: center ;
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -68,4 +72,12 @@ h1 {
     font-weight: 900;
     -webkit-user-select: none;
     user-select: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .input{
+        padding: 10%;
+        font-size: 30px;
+    }
 }
